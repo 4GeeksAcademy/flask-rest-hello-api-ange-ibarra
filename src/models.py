@@ -8,7 +8,6 @@ class User(db.Model):
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(80), nullable=False)
     is_active = db.Column(db.Boolean(), nullable=False)
-    # Relación favoritos
     favorites = db.relationship('Favorite', backref='user', lazy=True)
 
     def serialize(self):

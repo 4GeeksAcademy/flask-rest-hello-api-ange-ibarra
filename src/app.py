@@ -60,7 +60,7 @@ def get_one_person(people_id):
         return jsonify({"msg": "Personaje no encontrado"}), 404
     return jsonify(person.serialize()), 200
 
-# --- ENDPOINTS DE PLANETS ---
+# --- ENDPOINTS PLANETS ---
 
 @app.route('/planets', methods=['GET'])
 def get_all_planets():
@@ -74,7 +74,7 @@ def get_one_planet(planet_id):
         return jsonify({"msg": "Planeta no encontrado"}), 404
     return jsonify(planet.serialize()), 200
 
-# --- ENDPOINTS DE USUARIOS Y FAVORITOS ---
+# --- ENDPOINTS USUARIOS Y FAVORITOS ---
 
 @app.route('/users', methods=['GET'])
 def get_users():
